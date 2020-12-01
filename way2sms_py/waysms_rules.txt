@@ -1,0 +1,50 @@
+LOGIN:    m1.way2sms.com/Login1.action
+POST
+gval=&mobileB=0.9020196442310298&scrWidth=1550&username=9876543210&password=password
+Cookie: _ga=GA1.2.1350396117.1414574016; _gat=1; __gads=ID=9cbf197f2d76bf58:T=1414574017:S=ALNI_MYWB8ljq5rTJkaavDpR9LYPF8gGJQ
++RESPONSE:
+HTTP/1.1 302 Found
+Location: http://m1.way2sms.com/MainView.action;jsessionid=5BAE9A6D7FCA89B5B2A640AB0874C930.w802?id=5BAE9A6D7FCA89B5B2A640AB0874C930.w802
+
+-RESPONSE:
+------------------------------------------------------------------------------------------------------------------------------------------
+TOKEN:       m1.way2sms.com/jsp/SingleSMS.jsp?Token=5BAE9A6D7FCA89B5B2A640AB0874C930.w802 HTTP/1.1
+GET
+Cookie: scrWidth=1550; _ga=GA1.2.1350396117.1414574016; _gat=1; __gads=ID=9cbf197f2d76bf58:T=1414574017:S=ALNI_MYWB8ljq5rTJkaavDpR9LYPF8gGJQ; JSESSIONID=A02~5BAE9A6D7FCA89B5B2A640AB0874C930.w802
+
++RESPONSE:
+big html to parse.
+No need to parse all time. (may be only once during login, or once a day)
+-RESPONSE:
+--------------------------------------------------------------------------------------------------------------------------------------------
+SENDSMS:      m1.way2sms.com/jsp/smstoss.action HTTP/1.1
+PROCESSING:
+var reqMob = document.getElementById(document.getElementById("m_15_b").value).value;
+var reqMess = document.getElementById("textArea").value;
+document.getElementById(document.getElementById("t_15_k_5").value).value = tkn;
+
+ document.InstantSMS.Send.value = "Sending..";
+ document.InstantSMS.Send.disabled = true;
+ document.InstantSMS.action = "./" + document.getElementById("smsActTo").value + ".action";
+ setTimeout(function() {
+  document.InstantSMS.submit();
+ }, 350);
+
+
+POST
+smsActTo=smstoss&catnamedis=Ramdan+Wishes&t_15_k_5=bUkTpP&a_m_p=snsms&w2sms=w2sms&pjkdws=sdfa43gf35f&m_15_b=BJTgHMSt&girkuTG=&bUkTpP=5BAE9A6D7FCA89B5B2A640AB0874C930.w802&adno=1&catnamedis=Ramdan+Wishes&Token=5BAE9A6D7FCA89B5B2A640AB0874C930.w802&textfield2=%2B91&BJTgHMSt=9876543210&textArea=hi+this+is+karthik.+%0D%0ACheck+your+message.+&txtLen=98
+
+Cookie: scrWidth=1550; _ga=GA1.2.1350396117.1414574016; _gat=1; __gads=ID=9cbf197f2d76bf58:T=1414574017:S=ALNI_MYWB8ljq5rTJkaavDpR9LYPF8gGJQ; JSESSIONID=A02~5BAE9A6D7FCA89B5B2A640AB0874C930.w802 
++RESPONSE:
+HTTP/1.1 302 Found
+Location:  http://m1.way2sms.com/generalconfirm.action?SentMessage=Message+has+been+submitted+successfully&Mnumber=9876543210&Mmess=hi+this+is+karthik.+%0D%0ACheck+your+message.+&Token=5BAE9A6D7FCA89B5B2A640AB0874C930.w802
+-RESPONSE:
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+LOGOUT:           m1.way2sms.com/LogOut 
+POST
+folder=inbox
+Cookie: _ga=GA1.2.1350396117.1414574016; _gat=1; __gads=ID=9cbf197f2d76bf58:T=1414574017:S=ALNI_MYWB8ljq5rTJkaavDpR9LYPF8gGJQ; JSESSIONID=A02~5BAE9A6D7FCA89B5B2A640AB0874C930.w802; scrWidth=1550
++RESPONSE: HTTP/1.1 200 OK
+-RESPONSE: 
+------------------------------------------------------------------------------------------------------------------------------------------------
